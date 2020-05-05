@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>nz.net.osnz.parent</groupId>
+    <artifactId>java-parent</artifactId>
+    <version>6.2</version>
+  </parent>
+
+  <groupId>nz.net.osnz.common</groupId>
+  <artifactId>common-jackson</artifactId>
+  <version>2.3-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>common-jackson</name>
+  <description>Jackson dependencies and helper utilities</description>
+
+  <properties>
+    <javadoc.opts />
+  </properties>
+
+  <scm>
+    <url>https://github.com/OpenSourceNZ/common-jackson</url>
+    <connection>scm:git:git@github.com:OpenSourceNZ/common-jackson.git</connection>
+    <developerConnection>scm:git:git@github.com:OpenSourceNZ/common-jackson.git</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+
+  <dependencies>
+    <dependency>
+      <groupId>nz.net.osnz.composite</groupId>
+      <artifactId>composite-jackson</artifactId>
+      <version>[2.7,)</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>nz.net.osnz.composite</groupId>
+      <artifactId>composite-unit-test</artifactId>
+      <version>[5.4,)</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>

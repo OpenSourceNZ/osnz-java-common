@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>nz.net.osnz.parent</groupId>
+        <artifactId>java-parent</artifactId>
+        <version>6.1</version>
+    </parent>
+
+    <groupId>nz.net.osnz.common</groupId>
+    <artifactId>common-ebean</artifactId>
+    <version>9.8-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>common-ebean</name>
+    <description>common-ebean</description>
+    <url>https://github.com/OpenSourceNZ/common-ebean</url>
+
+    <properties>
+        <sonar.language>java</sonar.language>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>nz.net.osnz.composite</groupId>
+            <artifactId>composite-ebean</artifactId>
+            <version>[8.2,9)</version>
+        </dependency>
+
+        <dependency>
+            <groupId>nz.net.osnz.composite</groupId>
+            <artifactId>composite-logging</artifactId>
+            <version>[4.3,5)</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>nz.net.osnz.composite</groupId>
+            <artifactId>composite-jackson</artifactId>
+            <version>[2.9,3)</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>nz.net.osnz.composite</groupId>
+            <artifactId>composite-spring</artifactId>
+            <version>[5.3,6)</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>[1.4.196]</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>nz.net.osnz.composite</groupId>
+            <artifactId>composite-spring-test</artifactId>
+            <version>[5.2,6)</version>
+            <scope>test</scope>
+        </dependency>
+
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.ebean</groupId>
+                <artifactId>ebean-maven-plugin</artifactId>
+                <version>11.27.1</version>
+                <executions>
+                    <execution>
+                        <id>main</id>
+                        <phase>process-classes</phase>
+                        <configuration>
+                            <transformArgs>debug=1</transformArgs>
+                        </configuration>
+                        <goals>
+                            <goal>enhance</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <scm>
+        <url>https://github.com/OpenSourceNZ/common-ebean</url>
+        <connection>scm:git:git@github.com/OpenSourceNZ/common-ebean.git</connection>
+        <developerConnection>scm:git:git@github.com:OpenSourceNZ/common-ebean.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Central Repository</name>
+            <url>http://repo.maven.apache.org/maven2</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+</project>

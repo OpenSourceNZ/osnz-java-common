@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>nz.net.osnz.parent</groupId>
+		<artifactId>java-parent</artifactId>
+		<version>5.4</version>
+	</parent>
+
+	<groupId>nz.net.osnz.common</groupId>
+	<artifactId>common-thymeleaf</artifactId>
+	<version>2.2-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>common-thymeleaf</name>
+	<description>common-thymeleaf</description>
+	<url>https://github.com/OpenSourceNZ/common-thymeleaf</url>
+
+	<properties>
+		<sonar.language>java</sonar.language>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<!-- Thymeleaf dependencies -->
+		<dependency>
+			<groupId>nz.net.osnz.composite</groupId>
+			<artifactId>composite-thymeleaf</artifactId>
+			<version>[2,3)</version>
+		</dependency>
+
+		<!-- provided dependencies -->
+		<dependency>
+			<groupId>nz.net.osnz.composite</groupId>
+			<artifactId>composite-logging</artifactId>
+			<version>[4.3,5)</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>nz.net.osnz.composite</groupId>
+			<artifactId>composite-spring-mvc</artifactId>
+			<version>[5.1,6)</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>nz.net.osnz.composite</groupId>
+			<artifactId>composite-spring-test</artifactId>
+			<version>[5.1,6)</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+</project>

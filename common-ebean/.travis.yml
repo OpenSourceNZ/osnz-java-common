@@ -1,0 +1,19 @@
+language: groovy
+jdk:
+- oraclejdk7
+sudo: false
+branches:
+ only:
+  - master
+cache:
+ directories:
+  - $HOME/.m2
+before_install:
+- unset GEM_PATH
+install: true
+before_script: true
+script:
+- mvn -U -B clean verify
+after_success:
+- mvn -U -B clean test jacoco:report
+after_script: true
